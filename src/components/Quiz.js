@@ -8,10 +8,10 @@ const Quiz = () => {
         <div className="quiz">
             {quizState.showResults && (
                 <div className="results">
-                    <div className="congratulations">Congrats!!!</div>
+                    <div className="congratulations">Congratulations</div>
                     <div className="results-info">
                         <div>You have complete the quiz!</div>
-                        <div>You've got 4 of 8</div>
+                        <div>You've got {quizState.correctAnswerCount} of {quizState.questions.length}</div>
                         <div className="next-button" onClick={()=> dispatch({type: "RESTART"})}>Restart </div>
                     </div>
                 </div>

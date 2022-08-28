@@ -1,21 +1,30 @@
-import Answers from "./Answers";
-import {useContext} from "react";
-import {QuizContext} from "../contexts/quiz";
+import Answer from "./Answers";
+import { useContext } from "react";
+import { QuizContext } from "../contexts/quiz";
 
-const Questions = () => {
-    const [quizState, dispatch]= useContext(QuizContext);
-    console.log('Question', quizState);
-    const currentQuestion = quizState.questions[quizState.currentQuestionIndex]
+const Question = ({ questions }) => {
+    const [quizState, dispatch] = useContext(QuizContext);
+    const currentQuestion = quizState.questions[quizState.currentQuestionIndex];
+    console.log("currentQuestion", currentQuestion);
     return (
         <div>
             <div className="question">{currentQuestion.question}</div>
             <div className="answers">
-                <Answers />
-                <Answers />
-                <Answers />
-                <Answers />
+                {quizState.answers.map((answer, index) => (
+                    <Answer
+                        answerText={answer}
+                        key={index}
+                        index={index}
+                        correctAnswer ={currentQuestion.correctAnswer}
+                        currentAnswer={quizState.currentAnswer}
+                        onSelectAnswer={(answerText) =>
+                            dispatch({type: 'SELECT_ANSWER', payload: answerText})
+                    }
+                    />
+                ))}
             </div>
-        </div>)
+        </div>
+    );
 };
 
-export default Questions;
+export default Question;
