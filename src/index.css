@@ -1,60 +1,56 @@
 body {
-    background-color: #47912c;
+    background-image: url("https://99px.ru/sstorage/53/2018/06/tmb_231254_820920.jpg");
+    background-size: 100%;
+    color: #f1f100;
 }
 
-div {
-    box-sizing: border-box;
-
-}
 
 .quiz {
-    width: 970px;
-    margin: 0 auto;
-    margin-top: 100px;
-
+    width: 1024px;
+    margin: auto;
+    margin-top: 200px;
 }
 
 .question {
-    background-color: #0094da;
+    background-color: #000000;
     color: #f1f100;
     padding: 10px;
-    min-height: 60px;
+    min-height: 50px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 24px;
-
+    justify-content: space-around;
+    font-size: 20px;
+    line-height: 1.48;
 }
 
 .results {
-    background-color: #fff;
-    height: 300px;
+    background-color: rgba(255, 255, 255, 0);
     text-align: center;
-
 }
 
 .congratulations {
-    background-color: #47912c;
-    padding: 20px;
-    font-size: 36px;
-    color: #fff;
+    background-color: rgba(76, 213, 27, 0);
+    margin-bottom: 100px;
+    font-size: 100px;
+    color: #ce0000;
+    font-family: "Rasa Light";
 }
 
 .results-info {
-    margin-top: 40px;
+    margin-top: 10px;
     margin-bottom: 40px;
-    font-size: 18px;
+    font-size: 35px;
+    color: #e0e744;
 }
 
 .answer {
     width: 48%;
-    background: #fff;
-    border: 2px solid #0094da;
+    background: rgba(20, 206, 213, 0.18);
+    border: 0px solid #000000;
     min-height: 70px;
     cursor: pointer;
     margin-bottom: 30px;
     display: flex;
-
 }
 
 .answers {
@@ -66,12 +62,13 @@ div {
 
 .answer-letter {
     font-size: 30px;
-    background-color: #0084da;
-    color: #fff;
+    background-color: #070707;
+    color: #f1f100;
     width: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 2%;
 }
 
 .answer-text {
@@ -86,7 +83,7 @@ div {
 }
 
 .correct-answer .answer-letter {
-    background: #1ea55b;
+    background: #05ec6d;
 }
 
 .wrong-answer {
@@ -99,8 +96,8 @@ div {
 
 .next-button {
     margin: 0 auto;
-    color: #fff;
-    background: #0b0e21;
+    color: #f1f100;
+    background: #000000;
     width: 300px;
     font-size: 18px;
     font-weight: 600;
@@ -110,9 +107,20 @@ div {
     text-align: center;
 }
 
+.restart-button{
+    margin: auto;
+    color: #cc0f0f;
+    font-size: 100px;
+    font-weight: 800;
+    padding: 50px 100px;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: center;
+}
+
 .score {
-    background: #fff;
-    color: red;
+    background: #000000;
+    color: #cece06;
     font-size: 18px;
     width: 200px;
     margin: 0 auto;

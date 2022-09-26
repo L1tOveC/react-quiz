@@ -34,10 +34,10 @@ const Quiz = () => {
                         </div>
                     </div>
                     <div
-                        className="next-button"
+                        className="restart-button"
                         onClick={() => dispatch({ type: "RESTART" })}
                     >
-                        Restart
+                        RESTART?
                     </div>
                 </div>
             )}
